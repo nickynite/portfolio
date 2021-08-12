@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Link to Stylesheet -->
+    <link id="theme" rel="stylesheet" href="./styles/styles.css">
+    <!-- Link to Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/73be727706.js" crossorigin="anonymous"></script>
+    <!-- Link to Dev Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- MOVING BLOB IN BACKGROUND -->
+        <div class="blob">
+            <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+            <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
+            </svg>
+        </div> 
+
+        <div class="button wrapper">
+            <button class="theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+        </div>
+        
+        
+        <!-- HEADER CONTAINER + WRAPPER -->
+        <div class="headerTexts wrapper">
+
+            <div class="nameText">
+                <h2>DESIGNER + FRONT-END DEVELOPER</h2>
+                <h1>Hi, I'm Nicky</h1>
+            </div>
+
+            <div class="description">
+                <p>I'm a designer and front-end developer currently based in Manitoba, Canada. I’m focused on creating meaningful experiences through design by applying creativity, empathy, patience, and problem solving.
+                </p>
+            </div>   
+        </div>   
+        
+        <!-- ARROW DOWN SCROLL -->
+        <div class="scroll">
+            <p>Get to know me more</p>
+            <div class="downArrow bounce">
+                <a href="#aboutMe"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="aboutMe">
+        <h1 class="wrapper">About Me</h1>
+
+        <div class="aboutContainer wrapper">
+
+            <div class="skills">
+                <h2>Some skills in my toolbox</h2>
+                <ul>
+                    <li><i class="fab fa-html5"></i>
+                        <p>HTML</p></li>
+                    <li><i class="fab fa-css3-alt"></i><p>CSS</p></li>
+                    <li><i class="fab fa-sass"></i><p>SCSS</p></li>
+                    <li><i class="fab fa-js-square"></i><p>Javascript</p></li>
+                    <li><i class="fab fa-git-square"></i><p>Git</p></li>
+                    <li><i class="fab fa-react"></i><p>React</p></li>
+                    <li><i class="devicon-firebase-plain"></i></i><p>Firebase</p></li>
+                    <li><i class="devicon-vscode-plain"></i></i><p>VS Code</p></li>
+                    <li><i class="devicon-photoshop-plain"></i><p>Photoshop</p></li>
+                    <li><i class="devicon-illustrator-plain"></i><p>Illustrator</p></li>
+                    <li><i class="fas fa-universal-access"></i><p>Accessibility</p></li>    
+                </ul>
+
+                <div class="photo">
+                    <img src="assets/nickyIMG.png" alt="a photo of Nicky, with a blue background.">
+                </div>
+            </div>
+
+            <div class="myStory">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel at temporibus assumenda perspiciatis cumque cum adipisci, nam tempora similique odit, nulla quaerat nesciunt. Ducimus, nostrum saepe? Adipisci, magnam quod.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis excepturi nemo quaerat totam nostrum corporis, doloremque perspiciatis eos atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nemo atque, quae corporis iusto ullam iure porro laborum laudantium neque fugiat repellendus enim magni libero tenetur dolorem suscipit quibusdam. Rem autem nobis, libero quae a blanditiis cumque magni? Voluptatum, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis excepturi nemo quaerat totam nostrum corporis, doloremque perspiciatis eos atque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nemo atque, quae corporis iusto ullam iure porro laborum laudantium neque fugiat repellendus enim magni libero tenetur dolorem suscipit quibusdam. Rem autem nobis, libero quae a blanditiis cumque magni? Voluptatum, unde. </p> 
+
+
+                <div class="scrollProjects">
+                    <p>Take a look at some recent projects</p>
+                    <div class="downArrow bounce">
+                        <a href="#myProjects"><i class="fas fa-chevron-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="myProjects">
+        <div class="projectsContainer wrapper">
+            <h1>My Projects</h1>
+
+            <div class="projectIntro">
+                <h3> A collection of my most recent projects.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptatibus, nesciunt consequatur possimus omnis voluptates.</p>
+                <br>
+                <p>To see some of my logo and print work, you can visit my Adobe Portfolio <a target="_blank" rel=”noopener noreferrer” href="https://nickynite.myportfolio.com/">here!</p></a>
+            </div>
+
+            <div class="project">
+                <img src="assets/worrywartIphone.jpg" alt="a close up of worry wart app on iphone screen.">
+
+                <div class="projectText">
+                    <h3>Worry Wart | React, SCSS, Firebase</h3>
+                    <p>Worry Wart is a mental health app for youth that allows users to share their worries anonymously and engage with other people’s worries. Part of a larger concept.</p>
+                    <a target="_blank" rel=”noopener noreferrer” href="https://worrywart.netlify.app/">Live Site</a>
+                    <a target="_blank" rel=”noopener noreferrer” href="https://worrywart.netlify.app/">View Github</a>    
+                </div> 
+
+            </div>
+
+            <div class="project">
+                <img src="assets/movieRocket.jpg" alt="a screenshot image of the movierocket app">
+
+                <div class="projectText">
+                    <h3>Movie Rocket | HTML, SCSS, Javascript, API</h3>
+                    <p>A cinematic time travel experience! Movie Rocket
+                        allows you to choose a specific date and reveals popular
+                        films released at that time throughout the years.</p>
+                        <p>This project was built with Grant Skinner.</p>
+                        <a target="_blank" rel=”noopener noreferrer” href="https://movierocket.github.io/project-two/">Live Site</a>
+                        <a target="_blank" rel=”noopener noreferrer” href="https://github.com/movierocket/project-two">View Github</a>
+                </div> 
+            </div>
+
+            <div class="project">
+                <img src="assets/podcastplanner.jpg" alt="an image of the podcast planner app on an iphone screen.">
+
+                <div class="projectText">
+                    <h3>Podcast Planner | React, SCSS, Firebase, API</h3>
+                    <p>Search for podcast episodes based on your travel time! Podcast Planner let's you search via topic and genre, and you can save your favourites to a playlist.</p>
+                    <p>This was an agency style group project with Chris, Beth and Frank.</p>
+                    <a target="_blank" rel=”noopener noreferrer” href="https://podcast-planner.netlify.app/">Live Site</a>
+                    <a target="_blank" rel=”noopener noreferrer” href="https://github.com/thepodcastplanners/project-four">View Github</a>
+                </div> 
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <section id="Contact">
+        <div class="contactContainer wrapper">
+            <h1>Contact</h1>
+            
+            <div class="contactFlex">
+                <div class="contactText">
+                    <h2>Get In Touch</h2>
+                    <p>Excited about a project? I'd love to connect with you!<p>
+                    <p>Feel free to book some time with me via 
+                
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickynite?background_color=fffff&primary_color=DAA520'});return false;">Calendly</a>
+                    <!-- Calendly link widget end -->
+                    or you can find me on social media.</p>
+                </div>
+
+                <div class="socialIcons">
+                    <ul>
+                        <li><a href="mailto: hello@nickynite.com"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://www.github.com/nickynite"><i class="devicon-github-original"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/nicky-nite-159393214/"><i class="devicon-linkedin-plain"></i></a></li>    
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2021 developed by Nicky.</p>
+    </footer>
+    
+</body>
+</html>

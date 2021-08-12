@@ -1,0 +1,57 @@
+#myProjects {
+    background-color: $lightBeige;
+}
+
+.projectIntro {
+    margin-left: 43%;
+    margin-bottom: 70px;
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-left: 2px solid $orange;    
+}
+
+.projectsContainer {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+    h1 {
+        position: absolute;
+        top: -30px;
+        padding-bottom: 50px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 50px;
+
+    img {
+        width: 60%;
+        height: auto;
+        
+    }
+
+    .projectText {
+        padding-left: 60px;
+        width: 70%;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        a {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            color: $orange;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    }    
+}

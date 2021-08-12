@@ -1,0 +1,88 @@
+#aboutMe {
+    background-color: $darkBeige;
+
+    h1 {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .photo {
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 10%;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        
+        &:hover {
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    position: relative;
+
+    .myStory {
+        width: 60%;
+        border-left: 2px solid $orange;
+        padding-top: 20px;
+
+        p {
+            margin-left: 40px;
+            margin-top: 20px;    
+        }
+    }
+
+    .scrollProjects {
+        text-align: center;
+
+        p {
+            padding-top: 15px;
+            font-size: 1.8rem;
+        }
+
+    }
+    
+}
+
+.skills {
+
+    width: 45%;
+
+    h2 {
+        margin-right: 40px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 300;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-right: 40px;
+
+        li {
+            text-align: center;
+            margin: 15px;
+            font-size: 3rem;
+            color: $black;
+
+            p {
+                margin-top: 5px;
+                color: $black;
+            }
+        }
+    }
+}
