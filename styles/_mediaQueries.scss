@@ -1,0 +1,56 @@
+// Small devices
+@media only screen and (max-width: 480px) {
+
+}
+
+// Medium Devices
+@media only screen and (max-width: 849px) {
+
+    header {
+
+        .headerTexts {
+            flex-direction: column;
+            padding-left: 50px;
+        }    
+
+        .headerTexts .description {
+            width: 90%;
+
+            p {
+                margin-top: 20px;
+            }
+        }
+
+        .scroll {
+            padding-top: 0;
+        }
+
+    }
+
+
+    #aboutMe {
+
+        .aboutContainer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skills {
+            width: 60%;
+
+            ul {
+                margin-right: 0;
+            }
+        }
+
+        .myStory {
+            width: 90%;
+            border-left: none;
+            margin-top: 30px;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

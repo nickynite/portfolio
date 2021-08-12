@@ -230,6 +230,148 @@ html {
   overflow: hidden;
 }
 
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 45px;
+}
+
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 100px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #ff8059;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ff8059;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ff8059;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  background: #f7f5f2;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #ff8059;
+}
+
+#menu li:hover {
+  color: #232e31;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -251,13 +393,9 @@ header .scroll p {
   font-size: 2rem;
   color: #232e31;
 }
-header .button {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 30px;
-}
-header .button .theme {
-  font-size: 3rem;
+header .theme {
+  font-size: 3.3rem;
+  margin-right: 150px;
   border: none;
   background: transparent;
   color: #ff8059;
@@ -382,12 +520,8 @@ header .button .theme {
 #aboutMe .photo {
   width: 200px;
   height: auto;
-  margin-top: 20px;
-  margin-left: 10%;
-  filter: grayscale(100%);
-}
-#aboutMe .photo:hover {
-  filter: none;
+  margin: 0 auto;
+  padding-bottom: 15px;
 }
 
 .aboutContainer {
@@ -404,7 +538,6 @@ header .button .theme {
 }
 .aboutContainer .myStory p {
   margin-left: 40px;
-  margin-top: 20px;
 }
 .aboutContainer .scrollProjects {
   text-align: center;
@@ -420,7 +553,7 @@ header .button .theme {
 .skills h2 {
   margin-right: 40px;
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   text-align: center;
 }
 .skills ul {
@@ -436,7 +569,7 @@ header .button .theme {
 .skills ul li {
   text-align: center;
   margin: 15px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #232e31;
 }
 .skills ul li p {
@@ -488,7 +621,7 @@ header .button .theme {
 }
 .project .projectText a {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #ff8059;
   text-decoration: none;
   margin-top: 10px;
@@ -555,6 +688,40 @@ footer p {
   padding-top: 10px;
 }
 
+@media only screen and (max-width: 849px) {
+  header .headerTexts {
+    flex-direction: column;
+    padding-left: 50px;
+  }
+  header .headerTexts .description {
+    width: 90%;
+  }
+  header .headerTexts .description p {
+    margin-top: 20px;
+  }
+  header .scroll {
+    padding-top: 0;
+  }
+
+  #aboutMe .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #aboutMe .skills {
+    width: 60%;
+  }
+  #aboutMe .skills ul {
+    margin-right: 0;
+  }
+  #aboutMe .myStory {
+    width: 90%;
+    border-left: none;
+    margin-top: 30px;
+  }
+  #aboutMe .myStory p {
+    margin-bottom: 10px;
+  }
+}
 *,
 h1,
 h2,
@@ -566,6 +733,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: #ff8059;
 }
 
 html {
@@ -612,4 +780,5 @@ p {
   font-weight: 300;
   font-size: 1.7rem;
   color: #232e31;
+  line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */

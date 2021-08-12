@@ -1,10 +1,12 @@
 @import 'setup';
 @import 'variables';
+@import 'hamMenu';
 @import 'header';
 @import 'aboutMe';
 @import 'projects';
 @import 'contact';
 @import 'footer';
+@import 'mediaQueries';
 
 
 
@@ -20,6 +22,7 @@ h4 {
 
 a {
     text-decoration: none;
+    color: $orange;
 }
 
 html {
@@ -66,5 +69,6 @@ p {
     font-weight: 300;
     font-size: 1.7rem;
     color: $black;
+    line-height: 1.5;
 }
 

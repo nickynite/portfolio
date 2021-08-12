@@ -21,21 +21,15 @@ header {
             color: $black;
         }
     }
-
-    .button {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 30px;
-
-      .theme {
-        font-size: 3rem;
-        border: none;
-        background: transparent;
-        color: #ff8059;
-        cursor: pointer;
-      }
-    }
     
+  .theme {
+    font-size: 3.3rem;
+    margin-right: 150px;
+    border: none;
+    background: transparent;
+    color: #ff8059;
+    cursor: pointer;
+  }    
 }
 
 .headerTexts {
