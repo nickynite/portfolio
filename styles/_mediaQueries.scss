@@ -1,4 +1,4 @@
-// Small devices
+// SMALL DEVICES
 @media only screen and (max-width: 480px) {
 
     body {
@@ -8,6 +8,7 @@
         }
         h2 {
             font-size: 1.6rem;
+
         }
 
         h3 {
@@ -31,18 +32,81 @@
         }
         .scroll p {
             font-size: 1.7rem;
-        }
-
-        
+        }    
     }
 
+    #aboutMe {
+        h1 {
+            padding-bottom: 20px;
+        }
 
+        h2 {
+            margin-right: 0;
+        }
 
+        .myStory p {
+            margin-left: 0;
+        }
 
+        .scrollProjects p {
+            font-size: 1.7rem;
+        }
+    }
 
+    #myProjects {
+
+        .projectIntro {
+            margin-left: 0;
+            border-left: none;
+            border-bottom: 1.5px solid $orange;
+            padding-left: 0;
+        }
+
+        .project {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            .projectText {
+                padding-left: 0;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    #Contact {
+        .contactFlex {
+            flex-direction: column;
+        
+
+            .contactText {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .socialIcons {
+                border-left: none;
+                border-top: 1.5px solid $orange;
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                li {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+            }
+        }    
+    }
 }
 
-// Medium Devices
+// MEDIUM DEVICES
 @media only screen and (max-width: 849px) {
 
     header {
@@ -63,9 +127,7 @@
         .scroll {
             padding-top: 0;
         }
-
     }
-
 
     #aboutMe {
 
@@ -93,3 +155,6 @@
         }
     }
 }
+
+// LARGE DEVICES COMING SOON
+

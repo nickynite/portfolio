@@ -253,6 +253,7 @@ header .theme {
   background: transparent;
   color: #ff8059;
   cursor: pointer;
+  z-index: 99;
 }
 
 .headerTexts {
@@ -407,9 +408,6 @@ header .theme {
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -431,36 +429,22 @@ header .theme {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #ff8059;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
   position: absolute;
   width: 300px;
@@ -490,21 +474,17 @@ header .theme {
   color: #232e31;
 }
 
-/*
- * And let's fade it in from the left
- */
 #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
-  #menu {
-    transform: none;
-    opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
+#menu {
+  transform: none;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
+
 #aboutMe {
   background-color: #ebe7e0;
 }
@@ -706,6 +686,58 @@ footer p {
   }
   header .scroll p {
     font-size: 1.7rem;
+  }
+
+  #aboutMe h1 {
+    padding-bottom: 20px;
+  }
+  #aboutMe h2 {
+    margin-right: 0;
+  }
+  #aboutMe .myStory p {
+    margin-left: 0;
+  }
+  #aboutMe .scrollProjects p {
+    font-size: 1.7rem;
+  }
+
+  #myProjects .projectIntro {
+    margin-left: 0;
+    border-left: none;
+    border-bottom: 1.5px solid #ff8059;
+    padding-left: 0;
+  }
+  #myProjects .project {
+    flex-direction: column;
+  }
+  #myProjects .project img {
+    width: 100%;
+  }
+  #myProjects .project .projectText {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #Contact .contactFlex {
+    flex-direction: column;
+  }
+  #Contact .contactFlex .contactText {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #Contact .contactFlex .socialIcons {
+    border-left: none;
+    border-top: 1.5px solid #ff8059;
+    width: 100%;
+  }
+  #Contact .contactFlex .socialIcons ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #Contact .contactFlex .socialIcons li {
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
 @media only screen and (max-width: 849px) {

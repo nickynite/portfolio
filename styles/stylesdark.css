@@ -259,6 +259,7 @@ header .theme {
   background: transparent;
   color: #ff8059;
   cursor: pointer;
+  z-index: 99;
 }
 
 .headerTexts {
@@ -411,9 +412,6 @@ header .theme {
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -435,36 +433,23 @@ header .theme {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #ff8059;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
   position: absolute;
   width: 300px;
@@ -494,21 +479,17 @@ header .theme {
   color:#ff8059;
 }
 
-/*
- * And let's fade it in from the left
- */
 #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
-  #menu {
-    transform: none;
-    opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+#menu {
+  transform: none;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-}
+
 #aboutMe {
   background-color: #181E27;
 }
@@ -746,4 +727,147 @@ p {
   font-size: 1.7rem;
   color: white;
   line-height: 1.5;
+}
+
+/* MEDIA QUERIES */
+/* SMALL DEVICES */
+@media only screen and (max-width: 480px) {
+
+  h1 {
+      font-size: 3.5rem;
+  }
+        
+  h2 {
+    font-size: 1.6rem;
+
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .headerTexts {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .description p {
+    font-size: 1.4rem;
+  }
+       
+  .scroll p {
+    font-size: 1.7rem;
+  }    
+
+  #aboutMe h1 {
+    padding-bottom: 20px;
+  }
+
+  #aboutMe h2 {
+    margin-right: 0;
+  }
+
+  .myStory p {
+    margin-left: 0;
+  }
+
+  .scrollProjects p {
+    font-size: 1.7rem;
+  }
+
+  .projectIntro {
+    margin-left: 0;
+    border-left: none;
+    border-bottom: 1.5px solid #ff8059;
+    padding-left: 0;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project img {
+    width: 100%;
+  }
+
+  .projectText {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+
+  
+  .contactFlex {
+    flex-direction: column;
+  }      
+
+  .contactText {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .socialIcons {
+    border-left: none;
+    border-top: 1.5px solid #ff8059;
+    width: 100%;
+  }
+
+  .socialIcons ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .socialIcons ul li {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+/* MEDIUM DEVICES */
+@media only screen and (max-width: 849px) {
+   
+  .headerTexts {
+    flex-direction: column;
+    padding-left: 50px;
+  }    
+
+  .headerTexts .description {
+    width: 90%;
+  }
+
+  .headerText .description p {
+    margin-top: 20px;
+  }
+        
+  .scroll {
+    padding-top: 0;
+  }
+   
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills {
+   width: 60%;
+  }
+
+  .skills ul {
+    margin-right: 0;
+  }
+
+  .myStory {
+    width: 90%;
+    border-left: none;
+    margin-top: 30px;
+  }
+
+  .myStory p {
+    margin-bottom: 10px;
+  }
 }
