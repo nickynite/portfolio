@@ -631,7 +631,8 @@ header .theme {
   color: white;
 }
 #Contact .contactFlex ul li:hover {
-  scale: 1.2;
+  -webkit-transform: scale(1.2);
+  transform:scale(1.2);
 }
 #Contact .socialIcons {
   padding: 20px 20px 5px 20px;
