@@ -16,8 +16,7 @@
     <!-- Link to Dev Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
     <!-- Link to JS -->
-    <script src="script.js"></script>
-    
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -35,13 +34,13 @@
         
         <!-- THEME TOGGLE + NAVIGATION -->
         <div class="navContainer wrapper">
-            <button class="theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+            <!-- <button class="theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button> -->
+            <button id="theme-toggle" class="theme"><i class="fas fa-adjust"></i></button>
 
             <nav>
                 <div id="menuToggle">
                   <!--
-                  A fake / hidden checkbox is used as click receiver,
-                  so you can use the :checked selector on it.
+                  hidden checkbox to click on and off
                   -->
                   <input type="checkbox" />
                   
@@ -111,7 +110,8 @@
                 <div class="photo">
                     <img src="assets/nickyIMG.png" alt="a photo of Nicky, with a blue background.">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis excepturi nemo quaerat totam nostrum corporis, doloremque perspiciatis eos atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nemo atque, quae corporis iusto ullam iure porro laborum laudantium neque fugiat repellendus enim magni libero tenetur dolorem suscipit quibusdam. Rem autem nobis, libero quae a blanditiis cumque magni? Voluptatum, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis excepturi nemo quaerat totam nostrum corporis, doloremque perspiciatis eos atque.</p>
+                <p>I’ve always been a creative and empathetic person with a strong desire to help others. 
+                    Prior to becoming a web developer and designer, I’ve worked in non-profit organizations focusing on animal welfare, childcare, and accessibility for the Deaf and hard of hearing. After I received my diploma in Graphic Design, I went ont to complete Juno College’s Web Immersive Bootcamp where I learned to design and build accessible and responsive web applications independently and collaboratively using HTML, CSS, and Javascript as well as other front-end technologies. My top skills are conflict resolution, embracing diversity and communication.</p>
 
 
                 <div class="scrollProjects">
@@ -130,10 +130,9 @@
             <h1>My Projects</h1>
 
             <div class="projectIntro">
-                <h3> A collection of my most recent projects.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptatibus, nesciunt consequatur possimus omnis voluptates.</p>
-                <br>
-                <p>To see some of my logo and print work, you can visit my Adobe Portfolio <a target="_blank" rel=”noopener noreferrer” href="https://nickynite.myportfolio.com/">here!</p></a>
+                <h3> A selection of my most recent projects.</h3>
+                <p>These are some of the projects I completed while at Juno College.</p>
+                <p>To see some of my logo and print work, you can visit my Adobe Portfolio <a target="_blank" rel=”noopener noreferrer” href="https://nickynite.myportfolio.com/">here.</p></a>
             </div>
 
             <div class="project">
@@ -143,7 +142,7 @@
                     <h3>Worry Wart | React, SCSS, Firebase</h3>
                     <p>Worry Wart is a mental health app for youth that allows users to share their worries anonymously and engage with other people’s worries. Part of a larger concept.</p>
                     <a target="_blank" rel=”noopener noreferrer” href="https://worrywart.netlify.app/">Live Site</a>
-                    <a target="_blank" rel=”noopener noreferrer” href="https://worrywart.netlify.app/">View Github</a>    
+                    <a target="_blank" rel=”noopener noreferrer” href="https://github.com/nickynite/project-three">View Github</a>    
                 </div> 
 
             </div>
@@ -204,8 +203,8 @@
                 <div class="socialIcons">
                     <ul>
                         <li><a href="mailto: hello@nickynite.com"><i class="fas fa-envelope"></i></a></li>
-                        <li><a href="https://www.github.com/nickynite"><i class="devicon-github-original"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/nicky-nite-159393214/"><i class="devicon-linkedin-plain"></i></a></li>    
+                        <li><a target="_blank" rel=”noopener noreferrer” href="https://www.github.com/nickynite"><i class="devicon-github-original"></i></a></li>
+                        <li><a target="_blank" rel=”noopener noreferrer” href="https://www.linkedin.com/in/nicky-nite-159393214/"><i class="devicon-linkedin-plain"></i></a></li>    
                     </ul>
                 </div>
             </div> 

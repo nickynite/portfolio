@@ -1,6 +1,45 @@
 // Small devices
 @media only screen and (max-width: 480px) {
 
+    body {
+
+        h1 {
+            font-size: 3.5rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    header {
+
+        .headerTexts {
+            padding-top: 80px;
+            padding-bottom: 50px;
+
+            .description p {
+                font-size: 1.4rem;
+            }
+        }
+        .scroll p {
+            font-size: 1.7rem;
+        }
+
+        
+    }
+
+
+
+
+
 }
 
 // Medium Devices
