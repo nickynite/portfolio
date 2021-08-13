@@ -231,17 +231,12 @@ html {
   overflow: hidden;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   height: 100vh;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: #222a36;
+  background: #222A36;
 }
 header .scroll {
   text-align: center;
@@ -386,13 +381,15 @@ header .theme {
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 #menuToggle a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 #menuToggle a:hover {
   color: #ff8059;
 }
@@ -432,7 +429,6 @@ header .theme {
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-
 
 #menuToggle input:checked ~ span {
   opacity: 1;
@@ -476,7 +472,7 @@ header .theme {
 }
 
 #menu li:hover {
-  color:#ff8059;
+  color: #ff8059;
 }
 
 #menuToggle input:checked ~ ul {
@@ -488,7 +484,7 @@ header .theme {
   transform: none;
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
+}
 
 #aboutMe {
   background-color: #181E27;
@@ -558,7 +554,7 @@ header .theme {
 }
 
 #myProjects {
-  background-color: #222a36;
+  background-color: #222A36;
 }
 
 .projectIntro {
@@ -628,7 +624,7 @@ header .theme {
   margin-left: 50px;
   padding-bottom: 15px;
   text-align: center;
-  color: white;
+  color: #232e31;
   transition: all 0.2s ease-in-out;
 }
 #Contact .contactFlex ul li a {
@@ -659,7 +655,7 @@ header .theme {
 }
 
 footer {
-  background-color: #222a36;
+  background-color: #222A36;
   height: 40px;
   text-align: center;
 }
@@ -668,6 +664,117 @@ footer p {
   padding-top: 10px;
 }
 
+@media only screen and (max-width: 480px) {
+  body h1 {
+    font-size: 3.5rem;
+  }
+  body h2 {
+    font-size: 1.6rem;
+  }
+  body h3 {
+    font-size: 1.5rem;
+  }
+  body p {
+    font-size: 1.4rem;
+  }
+
+  header .headerTexts {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  header .headerTexts .description p {
+    font-size: 1.4rem;
+  }
+  header .scroll p {
+    font-size: 1.7rem;
+  }
+
+  #aboutMe h1 {
+    padding-bottom: 20px;
+  }
+  #aboutMe h2 {
+    margin-right: 0;
+  }
+  #aboutMe .myStory p {
+    margin-left: 0;
+  }
+  #aboutMe .scrollProjects p {
+    font-size: 1.7rem;
+  }
+
+  #myProjects .projectIntro {
+    margin-left: 0;
+    border-left: none;
+    border-bottom: 1.5px solid #ff8059;
+    padding-left: 0;
+  }
+  #myProjects .project {
+    flex-direction: column;
+  }
+  #myProjects .project img {
+    width: 100%;
+  }
+  #myProjects .project .projectText {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #Contact .contactFlex {
+    flex-direction: column;
+  }
+  #Contact .contactFlex .contactText {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #Contact .contactFlex .socialIcons {
+    border-left: none;
+    border-top: 1.5px solid #ff8059;
+    width: 100%;
+  }
+  #Contact .contactFlex .socialIcons ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #Contact .contactFlex .socialIcons li {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 849px) {
+  header .headerTexts {
+    flex-direction: column;
+    padding-left: 50px;
+  }
+  header .headerTexts .description {
+    width: 90%;
+  }
+  header .headerTexts .description p {
+    margin-top: 20px;
+  }
+  header .scroll {
+    padding-top: 0;
+  }
+
+  #aboutMe .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #aboutMe .skills {
+    width: 60%;
+  }
+  #aboutMe .skills ul {
+    margin-right: 0;
+  }
+  #aboutMe .myStory {
+    width: 90%;
+    border-left: none;
+    margin-top: 30px;
+  }
+  #aboutMe .myStory p {
+    margin-bottom: 10px;
+  }
+}
 *,
 h1,
 h2,
@@ -727,147 +834,4 @@ p {
   font-size: 1.7rem;
   color: white;
   line-height: 1.5;
-}
-
-/* MEDIA QUERIES */
-/* SMALL DEVICES */
-@media only screen and (max-width: 480px) {
-
-  h1 {
-      font-size: 3.5rem;
-  }
-        
-  h2 {
-    font-size: 1.6rem;
-
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.4rem;
-  }
-
-  .headerTexts {
-    padding-top: 80px;
-    padding-bottom: 50px;
-  }
-
-  .description p {
-    font-size: 1.4rem;
-  }
-       
-  .scroll p {
-    font-size: 1.7rem;
-  }    
-
-  #aboutMe h1 {
-    padding-bottom: 20px;
-  }
-
-  #aboutMe h2 {
-    margin-right: 0;
-  }
-
-  .myStory p {
-    margin-left: 0;
-  }
-
-  .scrollProjects p {
-    font-size: 1.7rem;
-  }
-
-  .projectIntro {
-    margin-left: 0;
-    border-left: none;
-    border-bottom: 1.5px solid #ff8059;
-    padding-left: 0;
-  }
-
-  .project {
-    flex-direction: column;
-  }
-
-  .project img {
-    width: 100%;
-  }
-
-  .projectText {
-    padding-left: 0;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-
-  
-  .contactFlex {
-    flex-direction: column;
-  }      
-
-  .contactText {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .socialIcons {
-    border-left: none;
-    border-top: 1.5px solid #ff8059;
-    width: 100%;
-  }
-
-  .socialIcons ul {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .socialIcons ul li {
-    margin-left: 0;
-    margin-right: 20px;
-  }
-}
-
-/* MEDIUM DEVICES */
-@media only screen and (max-width: 849px) {
-   
-  .headerTexts {
-    flex-direction: column;
-    padding-left: 50px;
-  }    
-
-  .headerTexts .description {
-    width: 90%;
-  }
-
-  .headerText .description p {
-    margin-top: 20px;
-  }
-        
-  .scroll {
-    padding-top: 0;
-  }
-   
-  .aboutContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skills {
-   width: 60%;
-  }
-
-  .skills ul {
-    margin-right: 0;
-  }
-
-  .myStory {
-    width: 90%;
-    border-left: none;
-    margin-top: 30px;
-  }
-
-  .myStory p {
-    margin-bottom: 10px;
-  }
 }
