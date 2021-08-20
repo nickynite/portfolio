@@ -6,13 +6,13 @@
   justify-content: flex-end;
   align-items: center;
   padding-top: 45px;
+  padding-right: 50px;
 }
 
 #menuToggle {
   display: block;
   position: fixed;
   top: 50px;
-  right: 100px;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -116,10 +116,12 @@
 #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
+  pointer-events: auto;
 }
 
   #menu {
     transform: none;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
